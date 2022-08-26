@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Quizz Manchots</title>
+	</head>
+	<body>
+		<div class="zone3">
+			<div>
+			<h1>
+			Voici un petit Quizz sur Elisa et Arnaud, si tu as tout bon tu auras peut-être même le droit à des surprises ;)
+			</h1>
+			</div>
+			<div class="zone2">
+			<ul>
+				<li>
+					<a href="index.html">Acceuil</a>
+				</li>
+				<li>
+					<a href="elisa.html">Elisa</a>
+				</li>
+				<li>
+					<a href="unan.html">1 An</a>
+				</li>
+				<li>
+					<a href="quizz.html">Quizz</a>
+				</li>
+			</ul>
+		</div>
+			<h2>Indique les réponses sous cette forme : 13 novembre 2038 (par exemple)</h2>
+			<div class="zone4">
+				<form method="post" action="#">
+					<p>
+						<label for="idReponse">Quand était leur premier bisous ?</label>
+						<input type="text" name="reponse" id="idReponse" size="20" maxlength="50" />
+					</p>
+					<p>
+						<label for="idReponse2">Date de leur premier date</label>
+						<input type="text" name="reponse" id="idReponse2" size="20" maxlength="50" />
+					</p>
+					<p>
+						<label for="idReponse3">Date de leur mise en couple ;)</label>
+						<input type="text" name="reponse" id="idReponse3" size="20" maxlength="50" />
+					</p>
+					<p>
+						<label for="idReponse4">Date de leur rencontre</label>
+						<input type="text" name="reponse" id="idReponse4" size="20" maxlength="50" />
+					</p>
+					<p>
+						<input type="button" value="Valider"  onClick="verifier();"/>
+					</p>
+				</form>
+				<p id="correction">
+				</p>
+				<p id="correction2">	
+				</p>
+				<p id="correction3">	
+				</p>
+				<p id="correction4">	
+				</p>
+				<p>Si tu as tout bon tu peux cliquer !</p>
+				<div class="zone3">
+					<li>
+						<a href="surprises.html">Surprises</a>
+					</li>
+				</div>
+				<script>
+					function verifier() {
+						var bisous=document.getElementById("idReponse").value;
+						var paragraphe=document.getElementById("correction");
+						if(bisous=="19 août 2021"){
+							paragraphe.innerHTML = "Bonne réponse !";
+						}
+						else{
+							paragraphe.innerHTML = "Mauvaise réponse ! Leur premier bisous était le 19 août 2021.";
+						}
+						var date=document.getElementById("idReponse2").value;
+						var paragraphe2=document.getElementById("correction2");
+						if(date=="19 août 2021"){
+							paragraphe2.innerHTML = "Bonne réponse !";
+						}
+						else{
+							paragraphe2.innerHTML = "Mauvaise réponse ! Leur premier date était aussi le 19 août 2021.";
+						}
+						var couple=document.getElementById("idReponse3").value;
+						var paragraphe=document.getElementById("correction3");
+						if(couple=="26 août 2021"){
+							paragraphe.innerHTML = "Bonne réponse !";
+						}
+						else{
+							paragraphe.innerHTML = "Mauvaise réponse ! La date de leur mise en couple est le 26 août 2021.";
+						}
+						var rencontre=document.getElementById("idReponse4").value;
+						var paragraphe=document.getElementById("correction4");
+						if(rencontre=="6 août 2021"){
+							paragraphe.innerHTML = "Bonne réponse !";
+						}
+						else{
+							paragraphe.innerHTML = "Mauvaise réponse ! La date de leur première rencontre est le 6 août 2021.";
+						}
+					}
+				</script>
+			</div>
+		</div>
+	</body>
+</html>
